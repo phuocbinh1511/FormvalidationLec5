@@ -14,7 +14,6 @@ class TrangChuActivity : AppCompatActivity() {
 
         val nguoiDung = intent.getSerializableExtra("THONG_TIN_USER") as? NguoiDung
 
-
         if (nguoiDung != null) {
             binding.tvThongTin.text = """
                 Thông tin người dùng:
@@ -22,6 +21,11 @@ class TrangChuActivity : AppCompatActivity() {
                 - Email: ${nguoiDung.email}
                 - SĐT: ${nguoiDung.sdt}
             """.trimIndent()
+        }
+
+        // Bắt sự kiện nút Quay Về
+        binding.btnQuayVe.setOnClickListener {
+            finish() // Đóng màn hình Trang Chủ và tự động quay lại màn hình Đăng ký
         }
     }
 }
