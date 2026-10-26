@@ -6,6 +6,7 @@ android {
     namespace = "com.example.formvalidation_lec5"
     compileSdk {
         version = release(37)
+
         buildFeatures {
             viewBinding = true
         }
